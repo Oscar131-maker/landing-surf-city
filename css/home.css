@@ -33,16 +33,21 @@ body,html{
 strong{
   font-weight: 800;
 }
+.wave{
+  width:100%; 
+}
 .section-title{
   font-size:35px;
   line-height:45px;
-  font-family: 'Hedvig Letters Serif', serif;
+  font-family: 'Lora', serif;
+  font-weight: 300;
 }
 .section-title-border{
   position: relative;
   font-size:35px;
   line-height:45px;
-  font-family: 'Hedvig Letters Serif', serif;
+  font-family: 'Lora', serif;
+  font-weight: 300;
 }
 .section-title-border::after{
   content: '';
@@ -58,7 +63,8 @@ strong{
   font-size:50px;
   line-height:60px;
   margin:5px 0px;
-  font-family: 'Hedvig Letters Serif', serif;
+  font-family: 'Lora', serif;
+  font-weight: 300;
 }
 .shadow-minititle{
   font-size:20px;
@@ -106,6 +112,7 @@ ul{
 /** Font Weight **/
 .weight-400{font-weight:400;}
 .weight-500{font-weight:500;}
+.weight-600{font-weight:600;}
 
 /** CTA Landing **/
 .cta-landing{
@@ -126,7 +133,8 @@ ul{
 
 /** Image wrapper **/
 .image-wrapper{text-align: center;}
-.image-wrapper img{width:100%;object-fit: cover;}
+.image-wrapper img{width:100%; object-fit: cover;}
+#digital-wave-img{width:70%;}
 
 /** Box padding **/
 .box-padding{padding:20px 30px;}
@@ -239,7 +247,7 @@ ul{
 /** Top hero **/
 .top-hero{
   width:100%;
-  background-image: url(../assets/img/top-hero.jpg);
+  background-image: url(../assets/img/digitaliza-tus-operaciones-comerciales-estudios-de-liderazgo.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -291,13 +299,14 @@ ul{
 }
 .plain-text-wave{
   background-image: url("https://images.unsplash.com/photo-1421284621639-884f4129b61d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: top;
+  background-position:top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(16, 16, 17, 0.9);
   background-blend-mode: soft-light;
   width:100%;
   margin-top:-5px;
+  filter: opacity(95%);
 }
 .plain-text-wave .plain-wrapper{
   width:50%;
@@ -330,98 +339,20 @@ ul{
   text-align: center;
 }
 .icon-section .icon-container img{
-  width:100px;
+  width:150px;
+  border-radius: 50%;
   margin-bottom:10px;
 }
 .icon-section .icon-container h5{
   font-size:18px;
+  line-height:24px;
   margin-bottom:10px;
+  font-weight:600;
 }
 .icon-section .icon-container p{
   font-size:17px;
 }
 
-/** Diagonal Hero **/
-.diagonal-hero{
-  width:100%;
-  display: grid;
-  grid-template-columns:repeat(2, 1fr);
-}
-.diagonal-hero .hero-image-right img{
-  width:100%;
-  height:100%;
-  clip-path: polygon(5% 0%, 100% 0, 100% 100%, 0% 100%);
-  object-fit: cover;
-}
-
-.diagonal-hero .hero-image-left img{
-  width:100%;
-  height:100%;
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-  object-fit: cover;
-}
-
-/** Overlay Image **/
-.overlay-hero{
-  width:100%;
-  padding:80px;
-  background-image: url('../assets/img/5-practicas-de-liderazgo-estudios-de-liderazgo.jpg');
-  background-position: center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-color: rgba(15, 15, 15, 0.7);
-  background-blend-mode: soft-light;
-  color:#fff;
-}
-.overlay-hero .column-wrapper .text-wrapper p{
-  color: #fff;
-}
-
-/** Review section **/
-.review-section{
-  padding:80px 100px;
-}
-.grid-review-section{
-  background-color:#fff;
-  position: relative;
-  width:100%;
-  height:100%;
-  box-shadow: 0px 0px 47px -15px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 0px 47px -15px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 47px -15px rgba(0,0,0,0.75);
-}
-.card-review{
-  width:100% !important;
-  display: grid;
-  grid-template-columns:2fr 1fr;
-  align-items: center;
-  padding:40px 70px;
-  gap:30px;
-}
-.card-review .profile-review .review-thumbnail{
-  text-align: center;
-  margin-bottom:10px;
-}
-.card-review .profile-review .review-thumbnail img{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-}
-.card-review .review-text p{font-size:16px;}
-.card-review .profile-review h4{
-  font-size:18px;
-  margin-bottom:0px;
-}
-.swiper-button-next{right:20px;}
-.swiper-button-left{left:20px;}
-.swiper-button-next svg, .swiper-button-prev svg{
-  width:16px;
-  fill: #9d9d9d;
-}
-.swiper-button-next:after,.swiper-button-prev:after{
-  content:none;
-}
-.swiper-pagination-bullet-active{background-color:#334893;}
 
 /*** Responsive design ***/
 /** Width 978px **/
@@ -430,73 +361,24 @@ ul{
   .inverse-two-column-responsive{
     grid-row: 1/2;
   }
+  #digital-wave-img{width:100%;}
   .section-title{text-align: start;}
-
-  /** Header **/
-  .top-header .top-nav-wrapper{
-    display: block;
-  }
-  .top-header .top-nav-wrapper .logo-nav{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-  }
-  .top-header .top-nav-wrapper .nav-link-container{
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background: #fff;
-    border-top: 1px solid #3b5dd8;
-    padding: 30px 50px;
-    margin: 0;
-    justify-content: start;
-    flex-direction: column;
-    align-items: end;
-    gap: 20px;
-    box-shadow: 0px 14px 19px -16px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 14px 19px -16px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 14px 19px -16px rgba(0,0,0,0.75);
-    display:none;
-  }
-  .btn-menu{
-    display:flex;
-    justify-content: flex-end;
-    cursor: pointer;
-  }
-  .nav-link{
-    font-size:25px;
-    font-weight:700;
-  }
-  .cta-nav{
-    padding: 5px 15px;
-    font-size: 25px;
-  }
   
-  /** Hero **/
+  /** Sections **/
   .top-hero{
-    grid-template-columns:70% 30%;
+    grid-template-columns:100%;
   }
 
+  .top-hero .hero-wrapper{
+    padding:120px 80px 80px 80px;
+    width:100%;
+  }
+
+  .plain-text-wave .plain-wrapper{padding:80px 0px; width:80%;}
   .plain-text .plain-wrapper{width:80%;}
 
-  .two-column-content .column-wrapper, .diagonal-hero{
+  .two-column-content .column-wrapper{
     grid-template-columns:100%;  
-  }
-  
-  /** Diagonal Hero **/
-  .hero-image-left{display:none;}
-  .diagonal-hero .hero-image-right img{
-    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  /** Review section **/
-  .review-section{
-    padding: 80px 30px;
-  }
-  .card-review{
-    grid-template-columns:100%;
-    padding: 40px 70px 35px 70px;
   }
 
   /** Footer **/
@@ -510,6 +392,23 @@ ul{
 
 /** Width 678px **/
 @media only screen and (max-width:678px){
+  .wave-responsive-section{
+    padding:40px 0px;
+  }
+  h2.heading-landing.text-blue.text-center{
+    font-size:25px !important;
+  }
+  div.plain-wrapper.pt-40{
+    margin-top:60px;
+  }
+  .section-title{
+    font-size:25px;
+    line-height:35px;
+  }
+  .section-title-border{
+    font-size:25px;
+    line-height:35px;
+  }
   .top-hero{grid-template-columns:100%;}
   .top-hero .hero-wrapper{
     width:100%; 
@@ -521,11 +420,10 @@ ul{
     padding:0px 20px;
   }
   .plain-text .plain-wrapper{width:100%;}
-  .heading-right{width:100%;}
-  .overlay-hero .column-wrapper .text-wrapper{padding:60px 0px;}
-  .review-section{padding: 80px 15px;}
-  .card-review{padding: 40px 20px 35px 20px;}
-  .swiper-button-next,.swiper-button-prev{display:none !important;}
+  .plain-text-wave .plain-wrapper{padding:0px; width:80%;}
+  .icon-section{
+    grid-template-columns: 1fr;
+  }
 
   #footer{padding: 50px 20px 0px 20px !important;}
   #footer .footer-columns .footer-col .img-logo img{width:100%;}
@@ -538,11 +436,6 @@ ul{
     .top-hero .hero-wrapper .text-wrapper .hero-title{
       font-size:25px;
     }    
-    .top-hero .hero-wrapper .text-wrapper .italic-paragraph{
-      margin-bottom:0px;
-    }
-    .top-header .top-nav-wrapper .nav-link-container{padding:20px;}
-    .nav-link{font-size:22px;}
 }
 
 
